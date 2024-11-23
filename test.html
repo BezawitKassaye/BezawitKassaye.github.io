@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultancy Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        header .btn-primary {
+            background-color: #ffbf00;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        header .btn-primary:hover {
+            background-color: #cc9900;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Services Section */
+        #services {
+            padding: 40px 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card .more-info {
+            display: none;
+            background: #f9f9f9;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .service-card.open .more-info {
+            display: block;
+        }
+
+        /* Booking Section */
+        #booking {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .booking-iframe {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            height: 630px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Consultancy Firm Name</h1>
+            <p>Your Partner in Strategic Growth</p>
+            <a href="#booking" class="btn-primary">Book a Consultation</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to our consultancy firm. We provide tailored strategic solutions to empower your business. Our team combines expertise with innovation to deliver measurable results.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" onclick="toggleInfo(this)">
+                    <h3>Strategy Consulting</h3>
+                    <p>Actionable strategies to tackle challenges and seize opportunities.</p>
+                    <div class="more-info">
+                        <p>Our strategy consulting services include detailed market analysis, competitive benchmarking, and business growth planning tailored to your needs.</p>
+                    </div>
+                </div>
+                <div class="service-card" onclick="toggleInfo(this)">
+                    <h3>Financial Advisory</h3>
+                    <p>Customized financial solutions to grow and protect your wealth.</p>
+                    <div class="more-info">
+                        <p>We offer investment planning, risk management, and financial optimization to secure your financial future and maximize returns.</p>
+                    </div>
+                </div>
+                <div class="service-card" onclick="toggleInfo(this)">
+                    <h3>Operations Management</h3>
+                    <p>Optimize your processes for maximum efficiency and success.</p>
+                    <div class="more-info">
+                        <p>Our operations management solutions streamline workflows, reduce costs, and ensure high-quality deliverables for sustainable success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking">
+        <div class="container">
+            <h2>Book a Consultation</h2>
+            <p>Choose a convenient time using our Google Calendar scheduler:</p>
+
+            <!-- Google Calendar Appointment Scheduling -->
+            <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+            <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+            <script>
+                (function() {
+                    var target = document.currentScript;
+                    window.addEventListener('load', function() {
+                        calendar.schedulingButton.load({
+                            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0FwPrRaKw9o5eLCH6Rh5n0s2sR-733dB6QRudbDbZcM31ehVxO-S7RhRc543Jq2Gq5xpDAMOqP?gv=true',
+                            color: '#039BE5',
+                            label: 'Book an appointment',
+                            target,
+                        });
+                    });
+                })();
+            </script>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Consultancy Firm Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleInfo(card) {
+            card.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
