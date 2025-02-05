@@ -3,223 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultancy Portfolio</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Nunito', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f9f9f9;
-            line-height: 1.6;
-        }
-
-        h1, h2 {
-            color: #1a1a2e;
-            margin-bottom: 10px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-
-        header .btn-primary {
-            background-color: #ffbf00;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        header .btn-primary:hover {
-            background-color: #cc9900;
-        }
-
-        /* About Section */
-        #about {
-            background-color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        /* Services Section */
-        #services {
-            padding: 40px 20px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .service-card {
-            background: white;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-card .more-info {
-            display: none;
-            background: #f9f9f9;
-            padding: 10px;
-            border-top: 1px solid #ddd;
-            margin-top: 10px;
-            text-align: left;
-        }
-
-        .service-card.open .more-info {
-            display: block;
-        }
-
-        /* Booking Section */
-        #booking {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .booking-iframe {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            height: 630px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1a1a2e;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-    </style>
+    <title>Bezawit M. Kassaye</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Portfolio of Bezawit M. Kassaye - Software Developer & Technical Innovator">
+    <meta name="keywords" content="software developer, portfolio, technical innovator">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/bdprofile.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Consultancy Firm Name</h1>
-            <p>Your Partner in Strategic Growth</p>
-            <a href="#booking" class="btn-primary">Book a Consultation</a>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Welcome to our consultancy firm. We provide tailored strategic solutions to empower your business. Our team combines expertise with innovation to deliver measurable results.</p>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card" onclick="toggleInfo(this)">
-                    <h3>Strategy Consulting</h3>
-                    <p>Actionable strategies to tackle challenges and seize opportunities.</p>
-                    <div class="more-info">
-                        <p>Our strategy consulting services include detailed market analysis, competitive benchmarking, and business growth planning tailored to your needs.</p>
-                    </div>
-                </div>
-                <div class="service-card" onclick="toggleInfo(this)">
-                    <h3>Financial Advisory</h3>
-                    <p>Customized financial solutions to grow and protect your wealth.</p>
-                    <div class="more-info">
-                        <p>We offer investment planning, risk management, and financial optimization to secure your financial future and maximize returns.</p>
-                    </div>
-                </div>
-                <div class="service-card" onclick="toggleInfo(this)">
-                    <h3>Operations Management</h3>
-                    <p>Optimize your processes for maximum efficiency and success.</p>
-                    <div class="more-info">
-                        <p>Our operations management solutions streamline workflows, reduce costs, and ensure high-quality deliverables for sustainable success.</p>
-                    </div>
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">BK</a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="glitch" data-text="Bezawit M. Kassaye">Bezawit M. Kassaye</h1>
+                <div class="subtitle">
+                    <span class="typing">Changing The World One Day At a Time!</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-container">
+                    <img src="img/potentialprofile.jpeg" alt="Bezawit Kassaye" class="profile-pic">
+                    <div class="profile-overlay"></div>
+                </div>
+            </div>
+            <a href="#projects" class="scroll-indicator">
+                <span>Explore My Work</span>
+                <div class="scroll-arrow"></div>
+            </a>
+        </div>
     </section>
 
-    <!-- Booking Section -->
-    <section id="booking">
-        <div class="container">
-            <h2>Book a Consultation</h2>
-            <p>Choose a convenient time using our Google Calendar scheduler:</p>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="img/pms.png" alt="Projectile Motion Simulator">
+                </div>
+                <div class="project-content">
+                    <h3>Projectile Motion Simulator</h3>
+                    <p>Physics simulation application for educational purposes</p>
+                    <div class="project-tags">
+                        <span>Physics</span>
+                        <span>Simulation</span>
+                        <span>Education</span>
+                    </div>
+                    <a href="https://github.com/BezawitKassaye/Projectile-Motion-Simulator-App" 
+                       class="project-link" target="_blank">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
 
-            <!-- Google Calendar Appointment Scheduling -->
-            <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-            <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-            <script>
-                (function() {
-                    var target = document.currentScript;
-                    window.addEventListener('load', function() {
-                        calendar.schedulingButton.load({
-                            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0FwPrRaKw9o5eLCH6Rh5n0s2sR-733dB6QRudbDbZcM31ehVxO-S7RhRc543Jq2Gq5xpDAMOqP?gv=true',
-                            color: '#039BE5',
-                            label: 'Book an appointment',
-                            target,
-                        });
-                    });
-                })();
-            </script>
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="img/yb.png" alt="YellowBall Research">
+                </div>
+                <div class="project-content">
+                    <h3>YellowBall Research</h3>
+                    <p>Advanced research code for data analysis and visualization</p>
+                    <div class="project-tags">
+                        <span>Research</span>
+                        <span>Data Analysis</span>
+                    </div>
+                    <a href="https://github.com/BezawitKassaye/working-with-YBs" 
+                       class="project-link" target="_blank">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="img/db.png" alt="Database Project">
+                </div>
+                <div class="project-content">
+                    <h3>College Software Database</h3>
+                    <p>Comprehensive database management system</p>
+                    <div class="project-tags">
+                        <span>Database</span>
+                        <span>Management</span>
+                    </div>
+                    <a href="https://github.com/BezawitKassaye/Grandfield-College-Software-Database" 
+                       class="project-link" target="_blank">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-container">
+            <form action="https://formsubmit.co/bezawit.mekasha12@gmail.com" method="POST" class="contact-form">
+                <div class="form-group">
+                    <input type="email" name="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Consultancy Firm Name. All Rights Reserved.</p>
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/bezawit-kassaye/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/bezawit_mk/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@chaotically_b_" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
         </div>
+        <p class="copyright">&copy; 2024 Bezawit M. Kassaye. All rights reserved.</p>
     </footer>
 
-    <script>
-        function toggleInfo(card) {
-            card.classList.toggle('open');
-        }
-    </script>
+    <!-- Cursor Animation -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
