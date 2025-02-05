@@ -50,3 +50,30 @@ window.addEventListener('scroll', () => {
     }
     lastScroll = currentScroll;
 });
+
+document.getElementById('contact').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    
+    fetch('https://formsubmit.co/bezawit.mekasha12@gmail.com', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        // Clear the form
+        this.reset();
+        
+        // Show success message
+        const successMessage = document.getElementById('successMessage');
+        successMessage.style.display = 'block';
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+        }, 5000);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
