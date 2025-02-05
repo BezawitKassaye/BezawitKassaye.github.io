@@ -268,38 +268,51 @@ body {
 .contact {
     padding: 8rem 2rem;
     background: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 4rem;
+    margin-bottom: 4rem;
     color: var(--primary-color);
 }
 
 .contact-form {
-    max-width: 600px;
+    width: 100%;
+    max-width: 800px;  /* Increased from 600px */
     margin: 0 auto;
+    padding: 2rem;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;  /* Increased spacing */
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     color: var(--text-color);
+    font-size: 1.2rem;  /* Larger label text */
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.75rem;
+    padding: 1.25rem;  /* Increased padding */
     border: 2px solid #eee;
-    border-radius: 8px;
-    font-size: 1rem;
+    border-radius: 12px;  /* Slightly larger radius */
+    font-size: 1.1rem;  /* Larger input text */
     transition: var(--transition);
+    background: white;
+}
+
+.form-group textarea {
+    min-height: 200px;  /* Taller textarea */
 }
 
 .form-group input:focus,
@@ -307,6 +320,24 @@ body {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(179, 129, 215, 0.2);
+}
+
+.btn-primary {
+    width: 200px;  /* Fixed width for button */
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    .contact h2 {
+        font-size: 3rem;
+    }
+    
+    .contact-form {
+        padding: 1rem;
+    }
 }
 
 /* Buttons */
